@@ -1,0 +1,13 @@
+# A simple .bahsrc
+# I moved the default .bashrc provided to ~/.bash/bash_default
+# Separate file for aliases - suggested by default
+# Will add more as I go :-)
+
+if [ -f ~/.bash/bash_default ]; then
+    . ~/.bash/bash_default
+fi
+
+if [ -f ~/.bash/bash_aliases ]; then
+    . ~/.bash/bash_aliases
+fi
+

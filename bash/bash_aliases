@@ -1,0 +1,34 @@
+#My BASH aliases
+
+# ls aliases
+alias ll='ls -l'
+alias lf='ls -F'
+alias lh='ls -lh'
+alias d="ls -lL | grep '^d'"
+
+# chmod aliases
+alias cx='chmod +x'
+alias c+w='chmod +w'
+alias c-w='chmod -w'
+
+# less aliases
+alias l='less -n'
+#alias lr='less -n -R'
+#alias lrg='less -n -R +G'
+
+# sort aliases
+alias su='sort | uniq -c'
+alias sus='sort | uniq -c | sort -nr'
+alias sus='sort | uniq -c | sort -nr | head'
+
+# head / tail aliases
+alias h='head'
+alias tl='tail'
+
+#extracting items from logs
+#alias e='sed "s/.*\!\!:1[ ]*\([^ ]*\).*/\1/"'
+alias e="perl -lne '{print (/\s+\!\!:1\s*(\S+)/)}'"
+
+# refresh
+alias sc='source ~/.bashrc'
+alias c=clear
