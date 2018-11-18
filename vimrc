@@ -121,58 +121,47 @@ inoremap <F1> <c-o>:w<cr>
 "Installing so that I can use some linter
 "Hope it works
 "Ref: https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
-
-"Doing something which the pathogen README suggested
-"Not sure will plugins will work without this?
-"But adding just in case
-"Vim language is hard to understand - atleast not beginner friendly
-"Something we could do about this
-"here is ref about what I am doing:
-"https://bit.ly/2s80loy
+"execute pathogen#infect()
 "
-"Update just saw :filetype output - I guess we don't need it
-"Not doing for now
-
-"-------------------Plugins----------------------------
+""Doing something which the pathogen README suggested
+""Not sure will plugins will work without this?
+""But adding just in case
+""Vim language is hard to understand - atleast not beginner friendly
+""Something we could do about this
+""here is ref about what I am doing:
+""https://bit.ly/2s80loy
+""
+""Update just saw :filetype output - I guess we don't need it
+""Not doing for now
 "
-"Syntastic
-"Settings from https://github.com/vim-syntastic/syntastic#installation
-"Don't know what they mean - breaking the Golden rule. But for now its ok
-"Will change these setting later after reading manual if needed
+""-------------------Plugins----------------------------
+""
+""Syntastic
+""Settings from https://github.com/vim-syntastic/syntastic#installation
+""Don't know what they mean - breaking the Golden rule. But for now its ok
+""Will change these setting later after reading manual if needed
+""
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 "
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-"Cpp linter options
-let g:syntastic_cpp_checkers = ['cppcheck', 'gcc']
-let g:syntastic_cpp_include_dirs = ["/home/ssinghal/freemail/server", 
-                                \"/home/ssinghal/freemail/server/shared",
-                                \"/home/ssinghal/freemail/server/db/include",
-                                \"/home/ssinghal/freemail/server/daemon",
-                                \"/home/ssinghal/freemail/server/daemon/thread_dns",
-                                \"/home/ssinghal/freemail/server/email_indexing",
-                                \"/home/ssinghal/freemail/shared",
-                                \"/home/ssinghal/freemail/shared/threads",
-                                \"/home/ssinghal/freemail/shared/include",
-                                \"/home/ssinghal/freemail/shared/gleafarc/h",
-                                \"/home/ssinghal/freemail/shared/cstr",
-                      \"/home/ssinghal/packages/build/googletest/googletest/include"]
-
-let g:syntastic_cpp_compiler_options = ' -std=c++14'
-let g:syntastic_cpp_remove_include_errors = 1
-let g:syntastic_cpp_check_header = 1
-
-"cppcheck options
-let g:syntastic_cpp_cppcheck_args = '--language=c++'
-
-"clang_check options
-let g:syntastic_cpp_clang_check_args = '-analyze'
-let g:syntastic_clang_check_config_file = '/home/ssinghal/.vim/.clang_check_config'
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"
+""Cpp linter options
+"let g:syntastic_cpp_checkers = ['cppcheck', 'gcc']
+"let g:syntastic_cpp_include_dirs = []
+"
+"let g:syntastic_cpp_compiler_options = ' -std=c++14'
+"let g:syntastic_cpp_remove_include_errors = 1
+"let g:syntastic_cpp_check_header = 1
+"
+""cppcheck options
+"let g:syntastic_cpp_cppcheck_args = '--language=c++'
+"
+""clang_check options
+"let g:syntastic_cpp_clang_check_args = '-analyze'
+"let g:syntastic_clang_check_config_file = '/home/ssinghal/.vim/.clang_check_config'
 
